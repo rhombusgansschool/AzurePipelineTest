@@ -1,0 +1,124 @@
+# Settings Backup
+
+This contains previously used Settings and Subsettings.
+So they don't have to be written from scrap again.
+
+---
+
+# Settings from Pore!Scan
+
+Settings bietet verschiedene Einstellungen zur Anpassung und Optimierung des PORE!SCAN-Systems.
+
+Die Settings sind je nach aktueller [Benutzerebene](../program/usermanagement.md#benutzer-ebene) nicht verfügbar.
+
+![](../../img/Settings/Settings_UserLevel.bmp)
+
+### GUI
+
+![GUI Overview](../../img/Settings/Settings_GUI.bmp)
+
+### Application
+
+Die Anwendungseinstellungen bietet diverse Hardware-Einstellungen:
+
+![](../../img/Settings/Settings_Application.png)
+
+??? note "Application [08] Parameters"
+
+	| <span class="hidden-header"></span> | <span class="hidden-header"></span> |
+    |--------------------------------|-------------------------------------------|
+    | **AxisCoarseSpeed**            | Grobgeschwindigkeit für grobe Achsenbewegung |
+    | **AxisFineSpeed**              | Feingeschwindigkeit für präzise Achsenbewegung |
+    | **AxisPresent**                | Sind Achsen im System installiert :material-checkbox-marked-outline: / :material-checkbox-blank-outline:                |
+    | **AxisSpeed**                  | Allgemeine Geschwindigkeit der Achsen     |
+    | **XAxisIpAddress**             | :material-ip-network: IP-Adresse der X-Achse  |
+    | **XAxisLimit**                 | Soft-Limit :octicons-stop-16: Begrenzungswert der X-Achsenbewegung      |
+    | **YAxisIpAddress**             | :material-ip-network: IP-Adresse der Y-Achse |
+    | **YAxisLimit**                 | Soft-Limit :octicons-stop-16: Begrenzungswert der Y-Achsenbewegung      |
+
+??? note "Camera [02] Parameters"
+
+    Die Kamera-Einstellungen ermöglichen die präzise Konfiguration und Identifikation des Kamerasensors im PORE!SCAN-System.
+
+    ![Camera Settings](../../img/Settings/Settings_Camera.bmp)
+
+    | <span class="hidden-header"></span> | <span class="hidden-header"></span> |
+    |--------------------------------|-------------------------------------------|
+    | **CameraName**                 | Zeigt den exakten Verbindungs-String zur Kamera <br> (z. B. Seriennummer in `device:` wie `H2032328`) |
+    | **CameraPresent**              | Auswahl ob eine ein Kamerasensor im System installiert ist :material-checkbox-marked-outline: / :material-checkbox-blank-outline: |
+
+    Über :material-magnify: `Search` lässt sich der Camera-String finden, der wichtige Informationen wie die Seriennummer enthält.
+
+??? note "Export [02] Parameters"
+
+    ![Export Settings](../../img/Settings/Settings_Export.png)
+
+    | <span class="hidden-header"></span> | <span class="hidden-header"></span> |
+    |--------------------------------|-------------------------------------------|
+    | **ExcelTemplate**              | Vorlage für Excel-Export                  |
+    | **ExportFolder**               | Zielordner für Exportdateien              |
+
+    ![](../../img/GUI/GUI_Menuleiste_Data.bmp)
+
+??? note "FocusLens [02] Parameters"
+
+    ![FocusLens Settings](../../img/Settings/Settings_FocusLens.png)
+
+    | <span class="hidden-header"></span> | <span class="hidden-header"></span> |
+    |--------------------------------|-------------------------------------------|
+    | **FocusLensPresent**           | Auswahl ob eine Fokuslinse im System installiert :material-checkbox-marked-outline: / :material-checkbox-blank-outline: |
+    | **FocusLensSerialNumber**      | Seriennummer der Fokuslinse               |
+
+??? note "Light [02] Parameters"
+
+    ![Light Settings](../../img/Settings/Settings_Light.png)
+
+    | <span class="hidden-header"></span> | <span class="hidden-header"></span> |
+    |--------------------------------|-------------------------------------------|
+    | **LightPresent**               | Auswahl ob eine Lichtquelle im System installiert :material-checkbox-marked-outline: / :material-checkbox-blank-outline: |
+    | **LightSerialNumber**          | Seriennummer der Lichtquelle              |
+
+??? note "ZoomLens [02] Parameters"
+
+    ![ZoomLens Settings](../../img/Settings/Settings_ZoomLens.png)
+
+    | <span class="hidden-header"></span> | <span class="hidden-header"></span> |
+    |--------------------------------|-------------------------------------------|
+    | **ZoomLensIpAddress**          | :material-ip-network: IP-Adresse der Zoomlinse  |
+    | **ZoomLensPresent**            | Auswahl ob eine Zoomlinse im System installiert :material-checkbox-marked-outline: / :material-checkbox-blank-outline: |
+
+### Authentication  
+
+![Authentication Settings](../../img/Settings/Settings_Authentication.png)  
+
+???+ note "Authentication [01] Parameter"  
+
+    **AutoLogOutActive**: Gibt an, ob der aktuelle User nach einer festgelegten Zeit ausgeloggt werden soll  
+    
+    **AutoLogOutIntervall**: Die bestimmte Zeit in Minuten, nach der der User ausgeloggt wird :octicons-clock-16:
+
+    **CardReaderPreferred**: Angabe, ob der User-Login über ein Kartenlesegerät erfolgen soll :material-checkbox-marked-outline:  
+
+### Halcon  
+
+![Halcon Settings](../../img/Settings/Settings_Halcon.png)  
+
+???+ note "Halcon [01] Parameter"  
+
+    **ProcedurePath**: Gibt den Ordnerpfad an, in dem die Halcon-Prozeduren liegen :material-folder:  
+
+### Logging  
+
+![Logging Settings](../../img/Settings/Settings_Logging.png)  
+
+???+ note "Logging [01] Parameter"
+
+    **LogLevel**: Gibt an, welche Programm-Events in den Logs gespeichert werden sollen  
+
+### WPF  
+
+![WPF Settings](../../img/Settings/Settings_WPF.png)  
+
+???+ note "WPF [01] Parameter"  
+
+    **Language**: Spracheinstellung Drop-Down-Menü  

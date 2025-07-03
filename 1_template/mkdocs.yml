@@ -1,0 +1,153 @@
+site_name: Goldluecke Help Document
+
+# docs_dir: ../../INSPECT!EXAMPLE/
+
+nav:
+  - Home: index.md
+  - "Benutzer-Oberfläche": GUI.md
+  # - QuickStart: quickstart.md
+  - "Menü":
+      - Live: Live/live.md
+      - Buffer:
+        - "Übersicht": GL.Buffer/buffer.md
+        - "ToDo*Bauteil zur Abnahme hinzufügen": GL.Buffer/buffer_RingspeicherAuschecken.md
+        - "ToDo*Ringspeicher Erneute Auswertung": GL.Buffer/buffer_RingspeicherNachpruefung.md
+      - Product: 
+        - "Übersicht": Product/product.md
+        - Halcon-Prüfplan:  Product/product_pruefplan.md
+        - ToDo*Halcon-Initialisierung: Product/product_halcon_initialize.md
+      - Setting: GL.Settings/settings.md
+      - Logging: GL.Logging/logging.md
+      - User management: GL.Authentication/usermanagement.md
+  #- Functions:
+    # - Calibrate Pore!Scan: section/functions/calibrate.md
+    #- View-Function: functions/viewfunction.md
+  - Changelog: changelog.md
+
+theme:
+  name: material
+  language: de  # Default language
+  favicon: img/internalDocumentation/favicon.ico
+  logo: img/internalDocumentation/GoldlueckeLogo_White.png
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+      primary: grey
+      accent: red
+
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+
+      primary: grey
+      accent: red
+  font:
+      text: 'Aptos'
+  features:
+    - navigation.expand
+    # - navigation.tabs
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+
+plugins:
+#  - exclude:  # pip install mkdocs-exclude # does not work as of 02.07.2025 ERROR   -  Config value 'plugins': The "exclude" plugin is not installed
+#      glob:   # Exludes the following folders/files in build/serve
+#        - "*_backup.md"
+  - search
+  - offline
+  - macros  # Enables variables under extra: var_example: "string" -> usage in .md {{ var_example }}
+#  - i18n:  # Internationalization plugin for mkdocs
+#      docs_structure: suffix
+#      fallback_to_default: true
+#      languages:
+#        - locale: de
+#          name: Deutsch
+#          build: true
+#          site_name: "Goldlücke Hilfe Dokument"
+#          site_description: "Beschreibung deutsch"
+#          theme:
+#            language: de
+#          nav_translations:
+#            Home: Startseite
+#            Benutzer-Oberflaeche: "Benutzer-Oberfläche"
+#            Menu: "Menü"
+#            User management: "Benutzerverwaltung"
+#            Functions: Funktionen
+#            Help: Hilfe
+#            QuickStart: Schnellstart
+#            Content: Inhalt
+#            Other: Sonstiges
+#            About: "Goldlücke"
+#        - locale: en
+#          name: English
+#          build: true
+#          site_name: "Goldlücke Help Document"
+#          site_description: "Description English"
+#          theme:
+#            language: en
+#          nav_translations:
+#            Home: Home
+#            Benutzer-Oberflaeche: User-Interface
+#            Menu: Menu
+#            User management: User management
+#            Functions: Functions
+#            Help: Help
+#            QuickStart: QuickStart
+#            Content: Content
+#            Other: Other
+#            About: "Goldlücke"
+#          default: true
+
+
+  - mkdocs-video:
+      is_video: True
+      video_muted: false
+      video_controls: True
+      video_autoplay: false
+      video_loop: False
+
+
+markdown_extensions: 
+  - attr_list
+  - abbr # Tooltips
+  - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.arithmatex: # MathJax - Ermöglicht Anzeige von mathematische Formeln
+      generic: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  # - pymdownx.superfences - Further Grid functionality for future use
+
+extra:
+  homepage: https://www.giib.de
+  generator: false
+  var_inspect: "INSPECT" #siehe plugins:
+  var_example: "EXAMPLE" #siehe plugins:
+  features:
+    ShowContent_Statusleiste: true # Turns on conditional {if ShowContent_Statusleiste} sections
+#   Syntax example for conditional content:
+#     {% if ShowContent_Statusleiste %}
+#       Content shown when ShowContent_Statusleiste is true ✔️.
+#     {% endif %}
+
+
+
+extra_css:
+  - stylesheets/extra.css #add special fonts (Franklin Gothic Book), see .css file for more info
+
+copyright: "Copyright &copy; 2016 - 2025 Goldl&uuml;cke GmbH"
